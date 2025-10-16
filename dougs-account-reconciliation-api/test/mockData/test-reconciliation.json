@@ -1,0 +1,38 @@
+{
+  "movements": [
+    {
+      "id": 1,
+      "date": "2025-03-05",
+      "label": "VIREMENT SALAIRE",
+      "amount": 2000
+    },
+    {
+      "id": 2,
+      "date": "2025-03-10",
+      "label": "CARTE RESTO",
+      "amount": -50
+    },
+    {
+      "id": 3,
+      "date": "2025-03-10",
+      "label": "CARTE RESTO",
+      "amount": -50
+    },
+    {
+      "id": 4,
+      "date": "2025-03-15",
+      "label": "LOYER",
+      "amount": -800
+    }
+  ],
+  "balances": [
+    {
+      "date": "2025-03-01",
+      "balance": 1000
+    },
+    {
+      "date": "2025-03-31",
+      "balance": 2000
+    }
+  ]
+}

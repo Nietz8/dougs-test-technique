@@ -1,0 +1,94 @@
+{
+  "isValid": false,
+  "reasons": [
+    {
+      "code": "DUPLICATE_OPERATION",
+      "message": "Found 1 duplicate operation(s) in 1 group(s)",
+      "severity": "ERROR",
+      "details": {
+        "duplicatedOperations": [
+          {
+            "originalId": 2,
+            "duplicateIds": [3],
+            "date": "2025-03-10",
+            "label": "CARTE RESTO",
+            "amount": -50
+          }
+        ]
+      },
+      "suggestions": [
+        {
+          "action": "DELETE_OPERATIONS",
+          "operationIds": [3],
+          "reason": "Remove duplicate(s) of operation #2",
+          "confidence": "HIGH"
+        }
+      ]
+    },
+    {
+      "code": "BALANCE_MISMATCH",
+      "message": "Balance mismatch detected between 2025-03-01 and 2025-03-31. Expected variation: 1000, Actual: 1100, Difference: -100",
+      "severity": "ERROR",
+      "affectedPeriod": {
+        "from": "2025-03-01",
+        "to": "2025-03-31"
+      },
+      "details": {
+        "balanceMismatch": {
+          "period": {
+            "from": "2025-03-01",
+            "to": "2025-03-31"
+          },
+          "expectedBalance": 2000,
+          "actualBalance": 2100,
+          "difference": -100,
+          "openingBalance": 1000,
+          "closingBalance": 2000,
+          "totalOperations": 4,
+          "operationsSum": 1100,
+          "operationsInPeriod": [
+            {
+              "id": 1,
+              "date": "2025-03-05",
+              "label": "VIREMENT SALAIRE",
+              "amount": 2000
+            },
+            {
+              "id": 2,
+              "date": "2025-03-10",
+              "label": "CARTE RESTO",
+              "amount": -50
+            },
+            {
+              "id": 3,
+              "date": "2025-03-10",
+              "label": "CARTE RESTO",
+              "amount": -50
+            },
+            {
+              "id": 4,
+              "date": "2025-03-15",
+              "label": "LOYER",
+              "amount": -800
+            }
+          ]
+        }
+      },
+      "suggestions": [
+        {
+          "action": "REVIEW_MANUALLY",
+          "reason": "Please review operations between 2025-03-01 and 2025-03-31 to identify missing or extra operations",
+          "confidence": "HIGH"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalReasons": 2,
+    "errorsCount": 2,
+    "warningsCount": 0,
+    "infosCount": 0,
+    "message": "Validation failed: 2 error(s), 0 warning(s), 0 info(s)."
+  },
+  "timestamp": "2025-10-11T11:57:08.441Z"
+}
