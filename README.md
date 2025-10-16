@@ -22,7 +22,7 @@ yarn start:dev
 yarn test
 ```
 
-**Application** : http://localhost:0
+**Application** : http://localhost:3000
 **Documentation Swagger** : http://localhost:3000/api/v1
 
 ## 📖 API
